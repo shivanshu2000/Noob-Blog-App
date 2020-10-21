@@ -1,0 +1,84 @@
+@import url('https://fonts.googleapis.com/css2?family=Epilogue:wght@300&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Epilogue', sans-serif;}
+
+
+/* header{
+  display: flex;
+  background-color: blueviolet;
+} */
+nav{
+  height:40px;
+  background-color: rgb(60, 60, 133);
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.main__items{
+  width:30%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.auth__items{
+  
+  width:20%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+
+}
+
+.main__items li{
+ list-style: none;
+ text-decoration: none;
+
+}
+
+li a{
+  text-decoration: none;
+  color: aliceblue;
+  padding: 6px;
+  height: inherit;
+ }
+
+.auth__items li {
+  list-style: none;
+}
+.auth__items a.nill:hover{
+  font-size: 15px;
+ }
+
+ .auth__items a.active{
+  background-color:rgb(187, 173, 45);
+  border-radius: 10px;
+ }
+
+ .nav__items a.active{
+  background-color:rgb(187, 173, 45);
+  border-radius: 10px;
+ }
+ .nav__items a.nill:hover{
+  font-size: 15px;
+ }
+/* 
+.logout__container{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+} */
+
+.logout__btn{
+ background-color: rgb(60, 60, 133);
+ color: lavender;
+ border-color:rgb(60, 60, 133) ;
+ font-size: inherit;
+ justify-self: center;
+ border-style: none;
+}
+
+

@@ -1,0 +1,24 @@
+<%- include('../includes/head.ejs')  %> 
+<link rel="stylesheet" href="/css/comment.css">
+<head>
+
+<body> 
+    <%- include('../includes/navigation.ejs')  %> 
+    <main >
+      <div class="root__container">
+        <div class="others"><h1><%=comments.title %> </h1></div>
+        <div class="others"><img src="/<%=comments.imageUrl %>" alt="An image"></div>
+        <div class="others"><%=comments.content %></div>
+        <article class="comments_container">
+        <% for( comment of comments.comments){ %>
+             <div class="single_comment username"><%= comment.userName %> </div>
+            <div class="single_comment"><%= comment.comment  %> </div>
+            <hr>
+            <% } %> 
+        </article> 
+        
+ </div>
+ </main>
+    <%- include('../includes/end.ejs') %>
+
+    

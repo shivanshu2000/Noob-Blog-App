@@ -1,0 +1,24 @@
+<header>
+    <nav>
+        <ul class="main__items">
+            <li class="nav__items"><a class="<%= path==='/'?'active':'nill' %>" href="/">Home</a></li>
+            <% if(isAuthenticated){ %> 
+            <li class="nav__items"><a class="<%= path==='/posts'?'active':'nill' %>" href="/my-posts">My Posts</a></li>
+            <li class="nav__items"><a class="<%= path==='/add-post'?'active':'nill' %>" href="/add-posts">Add Post</a></li>
+            <% } %> 
+        </ul>
+        <ul class="auth__items">
+            <% if(!isAuthenticated){ %> 
+           <li class="nav__items"><a class="<%= path==='/login'?'active':'nill' %>" href="/login">Login</a></li>
+           <li class="nav__items"><a class="<%= path==='/sign-up'?'active':'nill' %>" href="/signup">Sign up</a></li>
+            <% } else{ %>  
+           <li class="logout__container">
+                <form action="/logout" method="POST" >
+                 <button type="submit" class="logout__btn">Logout</button>
+                </form>
+            </li>
+        <% } %> 
+            
+        </ul>
+    </nav>
+</header>

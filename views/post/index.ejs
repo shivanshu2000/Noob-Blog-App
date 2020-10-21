@@ -1,0 +1,61 @@
+<%- include('../includes/head.ejs')  %> 
+<link rel="stylesheet" href="/css/index.css">
+<head>
+
+<body>
+    <%- include('../includes/navigation.ejs')  %> 
+
+  <main>
+      <% if(prods.length>0){%>
+      <div class="grid">
+          <% for(let product of prods) { %>
+          
+          <article class="product__item">
+            <div>
+              <h4 class="userName"><%= product.userName %> </h4>
+              <hr>
+            </div>
+            <div>
+              <header class="title__header">
+                  <h1 class="title"><%=product.title%></h1>
+              </header>
+            </div>
+
+         <div class="image__container">
+              <img src="/<%=product.imageUrl%>" alt="<%=product.title%>">
+          </div>
+
+          <div>
+            <p class="caption"><%=product.content%></p>
+          </div>
+
+          <div >
+          <form action="/add-comment" method="POST" class="form">
+            <% if(isAuthenticated){ %> 
+           <input class="comment__input" type="text" placeholder="Add comment" name="comment">
+           <input type="hidden"  name="id" value="<%= product._id%>">
+          
+            <button id="add_comment_btn" class="add__comment" type="submit">Add Comment</button>
+            <button class="add__comment"><a href="/post/<%=product._id%> " >View all comments</a></button>
+           <% }else{ %> 
+           
+            <div> <h3><a class="login__first" href="/login">Login to see comments</a></h3> </div> 
+           <% } %> 
+          </form>
+
+          
+         </div>
+
+        </article>
+
+        <% } %>
+      </div>
+      <% } else{ %>
+        <h1>No Products Found!</h1>
+        
+        <% } %>
+   </main>
+   <script src="/js/script.js"></script>
+
+    <%- include('../includes/end.ejs') %> 
+

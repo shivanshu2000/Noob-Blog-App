@@ -1,0 +1,36 @@
+<%- include('../includes/head.ejs')  %> 
+<link rel="stylesheet" href="/css/addPost.css">
+</head>
+
+<body>
+    <%- include('../includes/navigation.ejs')  %>
+    
+    <main>            
+      
+        <form action="/signup" method="POST" class="inputs">
+
+            <div class="form-control">
+                <label for="name" >Name</label>
+                <input type="name" name="name">
+            </div>
+    
+        <div class="form-control">
+            <label for="E-mail">E-mail</label>
+            <input type="email" name="email">
+        </div>
+        <div class="form-control">
+            <label for="password">Password</label>
+            <input type="password" name="password">
+        </div>
+
+        <div class="form-control">
+            <label for="confirmPassword" >Confirm password</label>
+            <input type="password" name="confirmPassword">
+        </div>
+
+        <button type="submit" class="btn">Sign up</button>
+        <input type="hidden" name="_csrf" value="<%= csrfToken %>">
+        </form>
+    </main>
+
+    <%- include('../includes/end.ejs')  %>    
