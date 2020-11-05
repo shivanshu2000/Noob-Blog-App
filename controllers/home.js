@@ -31,7 +31,6 @@ exports.getPost = async (req, res, next) => {
     select: "comment userId userName",
   });
 
-  console.log(post);
   res.render("post/comment", {
     comments: post,
     title: "Add Comment",

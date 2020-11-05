@@ -1,70 +1,66 @@
-@import url('https://fonts.googleapis.com/css2?family=Epilogue:wght@300&display=swap');
-*{
+@import url("https://fonts.googleapis.com/css2?family=Epilogue:wght@300&display=swap");
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Epilogue', sans-serif;}
+  font-family: "Epilogue", sans-serif;
+}
 
-
-/* header{
-  display: flex;
-  background-color: blueviolet;
-} */
-nav{
-  height:40px;
+.nav {
+  height: 40px;
   background-color: rgb(60, 60, 133);
   width: 100%;
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
 }
 
-.main__items{
-  width:30%;
+.main__items {
+  width: 50%;
   display: flex;
-  justify-content: space-around;
+  justify-content: flex-start;
   align-items: center;
 }
-.auth__items{
-  
-  width:20%;
+.auth__items {
+  width: 50%;
   display: flex;
-  justify-content: space-around;
+  justify-content: flex-end;
   align-items: center;
-
 }
 
-.main__items li{
- list-style: none;
- text-decoration: none;
+.main__items li {
+  list-style: none;
 
+  margin-right: 50px;
+  text-decoration: none;
 }
 
-li a{
+li a {
   text-decoration: none;
   color: aliceblue;
   padding: 6px;
   height: inherit;
- }
+}
 
 .auth__items li {
   list-style: none;
+  margin-right: 20px;
 }
-.auth__items a.nill:hover{
+.auth__items a.nill:hover {
   font-size: 15px;
- }
+}
 
- .auth__items a.active{
-  background-color:rgb(187, 173, 45);
+.auth__items a.active {
+  background-color: rgb(187, 173, 45);
   border-radius: 10px;
- }
+}
 
- .nav__items a.active{
-  background-color:rgb(187, 173, 45);
+.nav__items a.active {
+  background-color: rgb(187, 173, 45);
   border-radius: 10px;
- }
- .nav__items a.nill:hover{
+}
+.nav__items a.nill:hover {
   font-size: 15px;
- }
+}
 /* 
 .logout__container{
   display: flex;
@@ -72,13 +68,46 @@ li a{
   justify-content: center;
 } */
 
-.logout__btn{
- background-color: rgb(60, 60, 133);
- color: lavender;
- border-color:rgb(60, 60, 133) ;
- font-size: inherit;
- justify-self: center;
- border-style: none;
+.logout__btn {
+  background-color: rgb(60, 60, 133);
+  color: lavender;
+  border-color: rgb(60, 60, 133);
+  font-size: inherit;
+  justify-self: center;
+  border-style: none;
 }
 
+.nav ul .hamburger div {
+  width: 20px;
+  height: 3px;
+  margin-top: 5px;
+  border-radius: 40px;
+  background-color: white;
+}
 
+.hamburger {
+  display: flex;
+  flex-direction: column;
+  margin-left: 15px;
+  opacity: 0;
+  justify-content: space-around;
+  height: 60%;
+}
+
+@media (max-width: 320px) {
+  .main__items {
+    width: 60%;
+  }
+  .auth__items {
+    width: 40%;
+  }
+
+  .sign-up a {
+    display: inline-block;
+    width: 68px;
+  }
+
+  .main__items li {
+    margin-right: 10px;
+  }
+}

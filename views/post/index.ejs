@@ -34,9 +34,14 @@
             <% if(isAuthenticated){ %> 
            <input class="comment__input" type="text" placeholder="Add comment" name="comment">
            <input type="hidden"  name="id" value="<%= product._id%>">
-          
+          <div class="view_and_add">
             <button id="add_comment_btn" class="add__comment" type="submit">Add Comment</button>
-            <button class="add__comment"><a href="/post/<%=product._id%> " >View all comments</a></button>
+            <form action="/post/<%=product._id%>">
+             <button type="submit" class="add__comment">All comments</button>
+            </form>
+            
+          </div>
+            
            <% }else{ %> 
            
             <div> <h3><a class="login__first" href="/login">Login to see comments</a></h3> </div> 
@@ -45,7 +50,7 @@
 
           
          </div>
-
+ 
         </article>
 
         <% } %>

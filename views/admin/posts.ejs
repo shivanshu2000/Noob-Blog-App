@@ -26,14 +26,14 @@
           </div>
           <div class="parent_buttons_container">
           <div class="buttons__container">
-          <form action="/delete-post/<%=product._id  %> " method="POST">
+          <form class="form__admin" action="/delete-post/<%=product._id  %> " method="POST">
             <input type="hidden" name="id" value="<%=product._id%> ">
             <input type="hidden" name="title" value="<%=product.title%> ">
             <input type="hidden" name="imageUrl" value="<%=product.imageUrl%> ">
             <input type="hidden" name="content" value="<%=product.content%> ">
-            <button type="submit" >Delete Post</button>
-            <button><a href="/edit-post/<%=product._id%> ">Edit Post</a></button>
-            <button><a href="/post/<%=product._id%>">View all comments</a></button>
+            <button type="submit" class="delete-btn btn_admin">Delete</button>
+            <button class="edit-btn btn_admin"><a href="/edit-post/<%=product._id%> ">Edit</a></button>
+            <button  class="all-comments-admin btn_admin" ><a href="/post/<%=product._id%>">comments</a></button>
             
           </form>
 
