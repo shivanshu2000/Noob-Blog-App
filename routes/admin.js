@@ -17,8 +17,7 @@ router.post(
   adminController.resizeUserPhoto,
   adminController.postEdit
 );
-router.post("/delete-post/:postId", adminController.deletePost);
 
 router.get("/edit-post/:postId", adminController.goToEditPage);
-
+router.post("/delete-post/:postId", adminController.deletePost);
 module.exports = router;

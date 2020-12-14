@@ -32,8 +32,8 @@
             <input type="hidden" name="imageUrl" value="<%=product.imageUrl%> ">
             <input type="hidden" name="content" value="<%=product.content%> ">
             <button type="submit" class="delete-btn btn_admin">Delete</button>
-            <button class="edit-btn btn_admin"><a href="/edit-post/<%=product._id%> ">Edit</a></button>
-            <button  class="all-comments-admin btn_admin" ><a href="/post/<%=product._id%>">comments</a></button>
+            <a href="/edit-post/<%=product._id%> " class="edit-btn btn_admin">Edit</a>
+            <a href="/post/<%=product._id%>" class="all-comments-admin btn_admin">comments</a>
             
           </form>
 
