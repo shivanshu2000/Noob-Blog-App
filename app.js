@@ -71,7 +71,12 @@ app.use(adminRoutes);
 const port = process.env.PORT || 8085;
 
 mongoose
-  .connect(DB)
+  .connect(DB, {
+    useNewUrlParser: true,
+    useCreateIndex: true,
+    useFindAndModify: false,
+    useUnifiedTopology: true,
+  })
   .then((result) => {
     app.listen(port);
   })
