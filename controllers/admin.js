@@ -99,40 +99,22 @@ exports.goToEditPage = (req, res, next) => {
 };
 
 exports.postEdit = async (req, res, next) => {
+  const { title, content } = req.body;
   try {
-    if (!req.body.title || !req.body.caption || !req.file) {
-      return res.redirect("/edit-posts");
-    }
-    const body = req.body;
-    let image = req.file;
-    const caption = body.caption;
-    const title = body.title;
-    if (image) {
-      image = image.filename;
-      const post = await Post.findById(req.params.id);
-      console.log(post);
-      post.title = title;
-      post.imageUrl = image;
-      post.caption = caption;
-      console.log(post);
-
-      await post.save();
-      res.redirect("/my-posts");
-      return;
-    }
-
-    const post = await Post.findById(req.params.id);
+    const id = req.params.id;
+    const post = await Post.findById(id);
     console.log(post);
     post.title = title;
-    post.caption = caption;
+    post.content = content;
 
-    await post.save();
+    await post.save({ validateBeforeSave: false });
 
     console.log(post);
 
     res.redirect("/my-posts");
   } catch (error) {
     console.log(error);
+    res.redirect("/edit-post" + id);
   }
 };
 

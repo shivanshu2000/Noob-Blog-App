@@ -10,16 +10,12 @@
                 <label for="title">Title</label>
             <input type="text" name="title" id="inputs" class="text" value="<%=post.title %> ">
             </div>
-            <div class="form-control">
-            <label for="image" class="image" >Image</label>
-            <input type="file" name="image" id="image">
-            </div>
+
             <div class="form-control">
             <label for="title">Caption</label>
-            <textarea name="caption" cols="30" rows="5" class="caption"><%=post.content%></textarea>
+            <textarea name="content" cols="30" rows="5" class="caption"><%=post.content%></textarea>
             </div>
-            
-            <input  name="id" type="hidden" value="<%=post._id%> ">
+
             <button type="submit" class="btn">Edit Post</button>
           </form>
         </main>
