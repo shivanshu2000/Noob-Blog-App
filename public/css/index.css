@@ -91,9 +91,16 @@ input {
   display: flex;
   justify-content: space-around;
   align-items: center;
+  flex: 1 1 auto;
   margin-top: 7px;
   width: 100%;
   overflow: hidden;
+}
+
+.buttons__container {
+  display: flex;
+  flex-direction: row;
+  flex: 1 1 auto;
 }
 
 @media (min-width: 723px) {
@@ -122,7 +129,7 @@ input {
     width: 100%;
   }
 }
-@media (max-width: 386px) {
+@media (max-width: 613px) {
   .form__admin {
     width: 100%;
     display: flex;
@@ -135,7 +142,8 @@ input {
 }
 
 .buttons__container .btn_admin,
-a {
+.edit-btn,
+.all-comments-admin {
   background-color: rgb(60, 60, 133);
   color: white;
   padding: 12px;

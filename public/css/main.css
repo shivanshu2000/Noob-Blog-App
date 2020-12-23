@@ -94,12 +94,12 @@ li a {
   height: 60%;
 }
 
-@media (max-width: 320px) {
+@media (max-width: 510px) {
   .main__items {
-    width: 60%;
+    width: 80%;
   }
   .auth__items {
-    width: 40%;
+    width: 20%;
   }
 
   .sign-up a {
@@ -110,4 +110,8 @@ li a {
   .main__items li {
     margin-right: 10px;
   }
+}
+
+.logout__container {
+  padding: 5px;
 }

@@ -10,7 +10,7 @@
         <ul class="auth__items">
             <% if(!isAuthenticated){ %> 
            <li class="nav__items"><a class="<%= path==='/login'?'active':'nill' %>" href="/login">Login</a></li>
-           <li class="nav__items sign-up"><a class="<%= path==='/sign-up'?'active':'nill' %>" href="/signup">Sign up</a></li>
+           <li class="nav__items sign-up" style="z-index: 100;"><a class="<%= path==='/sign-up'?'active':'nill' %>" style="z-index: 100;" href="/signup">Sign up</a></li>
             <% } else{ %>  
            <li class="logout__container">
                 <form action="/logout" method="POST" >
